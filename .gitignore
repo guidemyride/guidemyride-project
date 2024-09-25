@@ -14,3 +14,6 @@ CMakeUserPresets.json
 
 # clangd cache directory
 .cache/
+
+# build directories
+[Bb]uild*
