@@ -23,6 +23,6 @@ target_link_libraries(libgmr_tests_runner PRIVATE GTest::gtest
                                                   GTest::gtest_main 
                                                   GTest::gmock 
                                                   GTest::gmock_main
-                                                  libguidemyride)
+                                                  guidemyride)
 
 add_test(NAME libgmr_tests_runner COMMAND libgmr_tests_runner)
