@@ -7,6 +7,7 @@ project(libguidemyride
 
 # testing options
 option(LIBGMR_BUILD_TESTS "Build tests" OFF)
+option(LIBGMR_BUILD_SHARED "Build shared library" OFF)
 
 set(LIBGMR_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
 
