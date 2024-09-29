@@ -1,3 +1,7 @@
+
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2024 nyashbox
+
 find_package(GTest 1.15 QUIET)
 
 set(LIBGMR_TEST_SOURCES

@@ -1,3 +1,7 @@
+
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2024 nyashbox
+
 cmake_minimum_required(VERSION 3.25.1)
 
 project(libguidemyride
