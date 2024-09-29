@@ -9,6 +9,10 @@ project(libguidemyride
         VERSION 0.1.0
         LANGUAGES CXX)
 
+LIST(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+include(CheckCompiler)
+
 # testing options
 option(LIBGMR_BUILD_TESTS "Build tests" OFF)
 option(LIBGMR_BUILD_SHARED "Build shared library" OFF)
