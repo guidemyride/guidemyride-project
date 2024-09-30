@@ -9,7 +9,7 @@ set(LIBGMR_INTEGRATION_SOURCES
 )
 
 add_executable(libgmr_integration_runner ${LIBGMR_INTEGRATION_SOURCES})
-target_include_directories(libgmr_tests_runner PRIVATE ${LIBGMR_INCLUDE_DIR})
+target_include_directories(libgmr_integration_runner PRIVATE ${LIBGMR_INCLUDE_DIR})
 target_link_libraries(libgmr_integration_runner PRIVATE GTest::gtest
                                                         GTest::gtest_main
                                                         GTest::gmock
