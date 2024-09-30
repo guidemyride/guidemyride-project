@@ -14,7 +14,9 @@ LIST(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(CheckCompiler)
 
 # testing options
-option(LIBGMR_BUILD_TESTS "Build tests" OFF)
+option(LIBGMR_BUILD_UNIT_TESTS "Build unit tests" OFF)
+option(LIBGMR_BUILD_INTEGRATION_TESTS "Build integration tests" OFF)
+
 option(LIBGMR_BUILD_SHARED "Build shared library" OFF)
 
 set(LIBGMR_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
