@@ -27,7 +27,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(src)
 
-if(LIBGMR_BUILD_TESTS)
+if(LIBGMR_BUILD_UNIT_TESTS OR LIBGMR_BUILD_INTEGRATION_TESTS)
     include(CTest)
     enable_testing()
 
