@@ -5,8 +5,8 @@
 find_package(libpqxx REQUIRED)
 
 set(LIBGMR_SOURCES
-    connection_pool.cc
-    postgres_connection.cc
+    connections/connection_pool.cc
+    connections/postgres.cc
 )
 
 if (LIBGMR_BUILD_SHARED OR BUILD_SHARED_LIBS)

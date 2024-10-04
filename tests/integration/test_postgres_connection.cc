@@ -4,8 +4,9 @@
 
 #include <gtest/gtest.h>
 
+#include <guidemyride/connections/postgres.h>
+
 #include "config.h"
-#include <guidemyride/postgres_connection.h>
 
 TEST(PostgresConnection, goodConnection) {
     EXPECT_NO_THROW(guidemyride::connection::PostgresConnection(

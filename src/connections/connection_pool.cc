@@ -4,8 +4,8 @@
 
 #include <span>
 
-#include <guidemyride/connection.h>
-#include <guidemyride/connection_pool.h>
+#include <guidemyride/connections/connection.h>
+#include <guidemyride/connections/connection_pool.h>
 
 using namespace guidemyride::connection;
 

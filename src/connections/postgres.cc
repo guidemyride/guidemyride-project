@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2024 nyashbox
 
-#include <guidemyride/postgres_connection.h>
+#include <guidemyride/connections/postgres.h>
 
 using namespace guidemyride::connection;
 

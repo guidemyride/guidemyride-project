@@ -1,9 +1,9 @@
-#ifndef GUIDEMYRIDE_TESTS_MOCK_CONNECTION_H
-#define GUIDEMYRIDE_TESTS_MOCK_CONNECTION_H
+#ifndef GUIDEMYRIDE_TESTS_MOCK_CONNECTION_H_
+#define GUIDEMYRIDE_TESTS_MOCK_CONNECTION_H_
 
 #pragma once
 
-#include <guidemyride/connection.h>
+#include <guidemyride/connections/connection.h>
 
 using namespace guidemyride::connection;
 class MockConnection : public IConnection {
@@ -13,4 +13,5 @@ class MockConnection : public IConnection {
     void lock() override { isLocked = true; };
     void unlock() override { isLocked = false; };
 };
-#endif
+
+#endif // GUIDEMYRIDE_TESTS_MOCK_CONNECTION_H_

@@ -5,12 +5,12 @@
 #ifndef GUIDEMYRIDE_CONNECTION_POOL_H_
 #define GUIDEMYRIDE_CONNECTION_POOL_H_
 
+#pragma once
+
 #include <condition_variable>
 #include <mutex>
 #include <queue>
 #include <span>
-
-#pragma once
 
 namespace guidemyride::connection {
 

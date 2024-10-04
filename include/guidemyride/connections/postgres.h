@@ -5,9 +5,11 @@
 #ifndef GUIDEMYRIDE_POSTGRES_CONNECTION_H_
 #define GUIDEMYRIDE_POSTGRES_CONNECTION_H_
 
+#pragma once
+
 #include <pqxx/connection>
 
-#include <guidemyride/connection.h>
+#include <guidemyride/connections/connection.h>
 
 namespace guidemyride::connection {
 

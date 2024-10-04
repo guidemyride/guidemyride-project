@@ -9,7 +9,7 @@
 
 #include <mutex>
 
-#include <guidemyride/connection_pool.h>
+#include <guidemyride/connections/connection_pool.h>
 
 namespace guidemyride::connection {
 

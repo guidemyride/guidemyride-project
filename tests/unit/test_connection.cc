@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include <guidemyride/connection.h>
+#include <guidemyride/connections/connection.h>
 
 #include "mock_connection.h"
 
