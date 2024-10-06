@@ -3,6 +3,7 @@
 # Copyright (c) 2024 nyashbox
 
 find_package(libpqxx REQUIRED)
+find_package(argon2 REQUIRED)
 
 set(LIBGMR_SOURCES
     connections/connection_pool.cc
@@ -15,5 +16,6 @@ else()
     add_library(guidemyride STATIC ${LIBGMR_SOURCES})
 endif()
 
-target_link_libraries(guidemyride PUBLIC libpqxx::pqxx)
+target_link_libraries(guidemyride PUBLIC libpqxx::pqxx 
+                                         argon2::argon2)
 target_include_directories(guidemyride PUBLIC ${LIBGMR_INCLUDE_DIR})
