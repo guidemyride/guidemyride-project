@@ -8,6 +8,7 @@ set(LIBGMR_UNIT_SOURCES
     test_session.cc
     test_connection_pool.cc
     test_connection.cc
+    test_utils.cc
 )
 
 add_executable(libgmr_unit_runner ${LIBGMR_UNIT_SOURCES})
