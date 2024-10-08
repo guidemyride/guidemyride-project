@@ -6,7 +6,6 @@ find_package(GTest 1.15 REQUIRED)
 
 set(LIBGMR_UNIT_SOURCES
     test_session.cc
-    test_connection_pool.cc
     test_connection.cc
     test_utils.cc
 )

@@ -9,8 +9,6 @@
 
 #include <mutex>
 
-#include <guidemyride/connections/connection_pool.h>
-
 namespace guidemyride::connection {
 
 /// @brief Connection base class
@@ -18,28 +16,12 @@ namespace guidemyride::connection {
 /// This class should be used as a base class (inherited) and is not
 /// intended to be instantiated.
 class IConnection {
-    friend ConnectionPool;
 
   public:
     /// @brief Locks connection
     ///
     /// Locks connection mutex
     virtual void lock() { mConnectionMutex.lock(); };
-
-    /// @brief Releases connection
-    ///
-    /// returns connection to the pool of free connections
-    virtual void release() {
-        if (mConnectionPool)
-            mConnectionPool->addConnection(this);
-    };
-
-    /// @brief Get connection from the pool
-    ///
-    /// @returns connection pool backref pointer
-    virtual const ConnectionPool *getConnectionPool() {
-        return mConnectionPool;
-    };
 
     /// @brief Unlocks connection
     ///
@@ -57,8 +39,7 @@ class IConnection {
     /// Default constructor is protected to prevent instantiation
     IConnection() = default;
 
-    std::mutex mConnectionMutex;     ///< Mutex for locking connection
-    ConnectionPool *mConnectionPool; ///< Connection pool back reference
+    std::mutex mConnectionMutex; ///< Mutex for locking connection
 };
 
 /// @brief Manage locking/unlocking connection

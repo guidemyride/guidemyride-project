@@ -7,7 +7,6 @@ find_package(argon2 REQUIRED)
 
 set(LIBGMR_SOURCES
     utils/hash.cc
-    connections/connection_pool.cc
     connections/postgres.cc
 )
 
