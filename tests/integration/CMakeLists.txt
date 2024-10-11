@@ -5,7 +5,7 @@
 find_package(GTest 1.15 REQUIRED)
 
 set(LIBGMR_INTEGRATION_SOURCES
-    test_postgres_connection.cc
+    models/test_stub.cc
 )
 
 add_executable(libgmr_integration_runner ${LIBGMR_INTEGRATION_SOURCES})

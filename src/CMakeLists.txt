@@ -7,7 +7,6 @@ find_package(argon2 REQUIRED)
 
 set(LIBGMR_SOURCES
     utils/hash.cc
-    connections/postgres.cc
 )
 
 if (LIBGMR_BUILD_SHARED OR BUILD_SHARED_LIBS)
