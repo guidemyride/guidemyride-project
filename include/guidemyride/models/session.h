@@ -19,7 +19,7 @@ namespace guidemyride::models {
 
 class Session {
   public:
-    Session(const uint64_t ttl = 0) : mTTL(ttl) {};
+    Session(const uint64_t ttl = 0);
 
     static Session get(const std::string_view session_id,
                        TransactionBase &conn);
@@ -33,8 +33,7 @@ class Session {
     ~Session() = default;
 
   private:
-    Session(const std::string &session_id, const uint64_t ttl = 0)
-        : mSessionID(session_id), mTTL(ttl) {};
+    Session(const std::string &session_id, const uint64_t ttl = 0);
 
     std::string mSessionID;
     std::map<std::string, std::string> mData;
