@@ -33,9 +33,9 @@ class Driver {
                                TransactionBase &txn,
                                const std::string_view field);
 
-    const std::string &getFullname(void) const { return mFullname; };
-    const std::string &getPhoneNumber(void) const { return mPhone; };
-    const std::string &getPassword(void) const { return mPassword; };
+    const std::string &getFullname(void) const;
+    const std::string &getPhoneNumber(void) const;
+    const std::string &getPassword(void) const;
 
     static void init(TransactionBase &txn);
     operator Session() const;
