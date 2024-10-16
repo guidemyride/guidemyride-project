@@ -26,7 +26,7 @@ class Session {
 
     const std::string &getSessionID(void) const;
 
-    std::string &operator[](const std::string_view &key);
+    std::string &operator[](const std::string &key);
 
     void commit(TransactionBase &txn);
 
