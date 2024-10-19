@@ -4,32 +4,18 @@
 
 cmake_minimum_required(VERSION 3.25.1)
 
-project(libguidemyride
-        DESCRIPTION "Guide My Ride shared library"
+project(guidemyride
+        DESCRIPTION "Guide My Ride"
         VERSION 0.1.0
         LANGUAGES CXX)
 
-LIST(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(CheckCompiler)
 
-# testing options
-option(LIBGMR_BUILD_UNIT_TESTS "Build unit tests" OFF)
-option(LIBGMR_BUILD_INTEGRATION_TESTS "Build integration tests" OFF)
-
-option(LIBGMR_BUILD_SHARED "Build shared library" OFF)
-
-set(LIBGMR_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include)
-
+# set global c++ options
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_subdirectory(src)
-
-if(LIBGMR_BUILD_UNIT_TESTS OR LIBGMR_BUILD_INTEGRATION_TESTS)
-    include(CTest)
-    enable_testing()
-
-    add_subdirectory(tests)
-endif()
+add_subdirectory(libs/common/)
