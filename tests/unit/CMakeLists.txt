@@ -5,7 +5,8 @@
 find_package(GTest 1.15 REQUIRED)
 
 set(LIBGMR_UNIT_SOURCES
-    test_session.cc
+    models/test_driver.cc
+    models/test_session.cc
     test_utils.cc
 )
 
