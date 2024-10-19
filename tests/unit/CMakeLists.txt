@@ -7,7 +7,7 @@ find_package(GTest 1.15 REQUIRED)
 set(LIBGMR_UNIT_SOURCES
     models/test_driver.cc
     models/test_session.cc
-    test_utils.cc
+    utils/test_hash.cc
 )
 
 add_executable(libgmr_unit_runner ${LIBGMR_UNIT_SOURCES})
