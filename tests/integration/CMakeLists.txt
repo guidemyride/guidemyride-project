@@ -5,7 +5,8 @@
 find_package(GTest 1.15 REQUIRED)
 
 set(LIBGMR_INTEGRATION_SOURCES
-    models/test_stub.cc
+    models/test_driver.cc
+    models/test_session.cc
 )
 
 add_executable(libgmr_integration_runner ${LIBGMR_INTEGRATION_SOURCES})
