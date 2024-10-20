@@ -19,3 +19,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(libs/common/)
+
+# services subdirectories
+add_subdirectory(services/auth)
+add_subdirectory(services/passenger)
+add_subdirectory(services/driver)
