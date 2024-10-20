@@ -5,16 +5,17 @@
 find_package(libpqxx REQUIRED)
 find_package(argon2 REQUIRED)
 
-set(LIBGMR_SOURCES
+set(GMR_COMMON_SOURCES
     utils/hash.cc
 )
 
-if (LIBGMR_BUILD_SHARED OR BUILD_SHARED_LIBS)
-    add_library(guidemyride SHARED ${LIBGMR_SOURCES})
+if (GMR_COMMON_BUILD_SHARED OR BUILD_SHARED_LIBS)
+    add_library(guidemyride SHARED ${GMR_COMMON_SOURCES})
 else()
-    add_library(guidemyride STATIC ${LIBGMR_SOURCES})
+    add_library(guidemyride STATIC ${GMR_COMMON_SOURCES})
 endif()
 
 target_link_libraries(guidemyride PUBLIC libpqxx::pqxx 
                                          argon2::argon2)
-target_include_directories(guidemyride PUBLIC ${LIBGMR_INCLUDE_DIR})
+
+target_include_directories(guidemyride PUBLIC ${GMR_COMMON_INCLUDE_DIR})

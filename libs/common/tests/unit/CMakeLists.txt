@@ -4,18 +4,18 @@
 
 find_package(GTest 1.15 REQUIRED)
 
-set(LIBGMR_UNIT_SOURCES
+set(GMR_COMMON_UNIT_SOURCES
     models/test_driver.cc
     models/test_session.cc
     utils/test_hash.cc
 )
 
-add_executable(libgmr_unit_runner ${LIBGMR_UNIT_SOURCES})
-target_include_directories(libgmr_unit_runner PRIVATE ${LIBGMR_INCLUDE_DIR})
-target_link_libraries(libgmr_unit_runner PRIVATE GTest::gtest 
-                                                 GTest::gtest_main 
-                                                 GTest::gmock 
-                                                 GTest::gmock_main
-                                                 guidemyride)
+add_executable(gmr_common_unit_runner ${GMR_COMMON_UNIT_SOURCES})
+target_include_directories(gmr_common_unit_runner PRIVATE ${GMR_COMMON_INCLUDE_DIR})
+target_link_libraries(gmr_common_unit_runner PRIVATE GTest::gtest 
+                                                     GTest::gtest_main 
+                                                     GTest::gmock 
+                                                     GTest::gmock_main
+                                                     guidemyride)
 
-add_test(NAME "Run unit tests" COMMAND libgmr_unit_runner)
+add_test(NAME "Run unit tests" COMMAND gmr_common_unit_runner)
