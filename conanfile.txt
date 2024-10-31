@@ -1,4 +1,5 @@
 [requires]
+grpc/1.65.0
 libpqxx/7.9.2
 argon2/20190702
 gtest/1.15.0
