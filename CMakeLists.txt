@@ -13,7 +13,15 @@ list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(CheckCompiler)
 
-# set global c++ options
+# build options
+option(GMR_BUILD_AUTH      "Build authentication service" ON)
+option(GMR_BUILD_DRIVER    "Build driver service"         ON)
+option(GMR_BUILD_PASSENGER "Build passenger service"      ON)
+
+option(GMR_BUILD_COMMON "Build common library" ON)
+option(GMR_BUILD_PROTOS "Build proto files"    ON)
+
+# global c++ options
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
