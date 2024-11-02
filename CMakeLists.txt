@@ -31,7 +31,5 @@ add_subdirectory(libs/common/)
 # proto files
 add_subdirectory(proto)
 
-# services subdirectories
-add_subdirectory(services/auth)
-add_subdirectory(services/passenger)
-add_subdirectory(services/driver)
+# services
+add_subdirectory(services)
