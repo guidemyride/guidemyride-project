@@ -25,7 +25,7 @@ target_link_libraries(gmr-protos
 
 target_include_directories(gmr-protos
     PUBLIC
-    "$<BUILD_INTERFACE:${GMR_PROTO_BINARY_DIR}>"
+    "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>"
 )
 
 # generate protocol buffers files
