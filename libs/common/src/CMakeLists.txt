@@ -15,6 +15,9 @@ else()
     add_library(guidemyride STATIC ${GMR_COMMON_SOURCES})
 endif()
 
+add_library(guidemyride::guidemyride ALIAS guidemyride)
+add_library(guidemyride::libguidemyride ALIAS guidemyride)
+
 target_link_libraries(guidemyride PUBLIC libpqxx::pqxx 
                                          argon2::argon2)
 
