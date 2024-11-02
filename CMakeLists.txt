@@ -20,6 +20,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(libs/common/)
 
+# proto files
+add_subdirectory(proto)
+
 # services subdirectories
 add_subdirectory(services/auth)
 add_subdirectory(services/passenger)
