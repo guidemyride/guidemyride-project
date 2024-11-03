@@ -1,0 +1,11 @@
+
+// SPDX-License-Identifier: MIT
+// Copyright (c) 2024 nyashbox
+
+syntax = "proto3";
+
+package guidemyride.services.driver;
+
+service DriverService {
+	// TODO: add code here 
+}

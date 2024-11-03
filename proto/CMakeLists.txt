@@ -12,6 +12,8 @@ file(MAKE_DIRECTORY ${GMR_PROTO_BINARY_DIR})
 
 set(GMR_PROTO_SOURCES
     "${GMR_PROTO_IMPORT_DIR}/auth.proto"
+    "${GMR_PROTO_IMPORT_DIR}/passenger.proto"
+    "${GMR_PROTO_IMPORT_DIR}/driver.proto"
 )
 
 add_library(gmr-protos OBJECT ${GMR_PROTO_SOURCES})
@@ -41,7 +43,9 @@ protobuf_generate(
 # generate gRPC files
 protobuf_generate(
     TARGET
-        gmr-protos LANGUAGE grpc
+        gmr-protos 
+    LANGUAGE 
+        grpc
     GENERATE_EXTENSIONS
         .grpc.pb.h .grpc.pb.cc
     PLUGIN
