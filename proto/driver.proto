@@ -15,5 +15,5 @@ message StubResponse {
 }
 
 service DriverService {
-	rpc StubMethod(StubRequest) returns (StubResponse)
+	rpc StubMethod(StubRequest) returns (StubResponse);
 }
