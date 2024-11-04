@@ -6,6 +6,14 @@ syntax = "proto3";
 
 package guidemyride.services.auth;
 
+message StubRequest {
+	string request = 1;
+}
+
+message StubResponse {
+	string response = 1;
+}
+
 service AuthService {
-	// TODO: add code here 
+	rpc StubMethod(StubRequest) returns (StubResponse);
 }
