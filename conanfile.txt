@@ -1,7 +1,0 @@
-[requires]
-grpc/1.65.0
-argon2/20190702
-gtest/1.15.0
-[generators]
-CMakeDeps
-CMakeToolchain
