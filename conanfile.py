@@ -1,4 +1,5 @@
 from conan import ConanFile
+from conan.tools.cmake import cmake_layout
 
 class GuideMyRideRecipe(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
