@@ -11,7 +11,7 @@
 			"description": "Conan toolchain (Release)",
 			"hidden": true,
 			"generator": "Unix Makefiles",
-			"binaryDir": "${sourceDir}/build/Debug",
+			"binaryDir": "${sourceDir}/build/Release",
 			"toolchainFile": "${sourceDir}/build/Release/generators/conan_toolchain.cmake"
 		},
 		{
