@@ -12,6 +12,7 @@ project(guidemyride
 list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(CheckCompiler)
+include(CTest)
 
 # build options
 option(GMR_BUILD_AUTH      "Build authentication service" ON)
