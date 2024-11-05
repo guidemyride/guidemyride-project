@@ -6,7 +6,7 @@ class GuideMyRideRecipe(ConanFile):
 
     def requirements(self):
         self.requires("poco/1.13.3")
-        self.requires("grpc/1.65.0")
+        self.requires("grpc/1.67.1")
         self.requires("argon2/20190702")
         
         self.test_requires("gtest/1.15.0")
