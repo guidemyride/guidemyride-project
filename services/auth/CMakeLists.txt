@@ -9,11 +9,4 @@ option(GMR_AUTH_BUILD_UNIT_TESTS "Build unit tests" OFF)
 option(GMR_AUTH_BUILD_INTEGRATION_TESTS "Build integration tests" OFF)
 
 add_subdirectory(src)
-
-# Include tests
-if(GMR_AUTH_BUILD_UNIT_TESTS OR GMR_AUTH_BUILD_INTEGRATION_TESTS)
-    include(CTest)
-    enable_testing()
-
-    add_subdirectory(tests)
-endif()
+add_subdirectory(tests)
