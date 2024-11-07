@@ -12,6 +12,7 @@ project(guidemyride
 list(PREPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(CheckCompiler)
+include(Tests)
 include(CTest)
 
 # build options
