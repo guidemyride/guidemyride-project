@@ -5,8 +5,8 @@
 find_package(GTest 1.15 REQUIRED)
 
 set(GMR_COMMON_INTEGRATION_SOURCES
-    models/test_driver.cc
-    models/test_session.cc
+    models/driver.test.cc
+    models/session.test.cc
 )
 
 add_executable(gmr_common_integration_runner 

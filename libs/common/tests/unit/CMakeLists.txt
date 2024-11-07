@@ -5,9 +5,9 @@
 find_package(GTest 1.15 REQUIRED)
 
 set(GMR_COMMON_UNIT_SOURCES
-    models/test_driver.cc
-    models/test_session.cc
-    utils/test_hash.cc
+    models/driver.test.cc
+    models/session.test.cc
+    utils/hash.test.cc
 )
 
 add_executable(gmr_common_unit_runner 
