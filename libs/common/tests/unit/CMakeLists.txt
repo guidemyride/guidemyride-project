@@ -10,12 +10,19 @@ set(GMR_COMMON_UNIT_SOURCES
     utils/test_hash.cc
 )
 
-add_executable(gmr_common_unit_runner ${GMR_COMMON_UNIT_SOURCES})
-target_include_directories(gmr_common_unit_runner PRIVATE ${GMR_COMMON_INCLUDE_DIR})
-target_link_libraries(gmr_common_unit_runner PRIVATE GTest::gtest 
-                                                     GTest::gtest_main 
-                                                     GTest::gmock 
-                                                     GTest::gmock_main
-                                                     guidemyride)
+add_executable(gmr_common_unit_runner 
+    ${GMR_COMMON_UNIT_SOURCES}
+)
+target_link_libraries(gmr_common_unit_runner 
+    PRIVATE 
+        GTest::gtest 
+        GTest::gtest_main 
+        GTest::gmock
+        GTest::gmock_main
+        guidemyride::guidemyride
+)
 
-add_test(NAME "Run unit tests" COMMAND gmr_common_unit_runner)
+add_test(
+    NAME "Run unit tests (Common)" 
+    COMMAND gmr_common_unit_runner
+)
