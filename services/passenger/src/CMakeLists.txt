@@ -6,12 +6,15 @@ set(GMR_PASSENGER_SOURCES
     passengerd.cc
 )
 
-add_executable(gmr-passengerd 
-    ${GMR_PASSENGER_SOURCES}
-)
+add_library(passenger OBJECT ${GMR_PASSENGER_SOURCES})
+add_library(guidemyride::passenger ALIAS passenger)
 
-target_link_libraries(gmr-authd
+target_link_libraries(passenger
     PRIVATE
         guidemyride::protos
-        guidemyride::libguidemyride
+        guidemyride::guidemyride
+)
+
+add_executable(gmr-passengerd 
+    $<TARGET_OBJECTS:guidemyride::passenger>
 )

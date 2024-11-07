@@ -6,12 +6,16 @@ set(GMR_AUTH_SOURCES
     authd.cc
 )
 
-add_executable(gmr-authd
-    ${GMR_AUTH_SOURCES}
-)
+add_library(auth OBJECT ${GMR_AUTH_SOURCES})
+add_library(guidemyride::auth ALIAS auth)
 
-target_link_libraries(gmr-authd
+target_link_libraries(auth
     PRIVATE
         guidemyride::protos
-        guidemyride::libguidemyride
+        guidemyride::guidemyride
 )
+
+add_executable(gmr-authd 
+    $<TARGET_OBJECTS:guidemyride::auth>
+)
+
