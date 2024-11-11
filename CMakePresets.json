@@ -5,57 +5,8 @@
 		"minor": 25,
 		"patch": 1
 	},
-	"configurePresets": [
-		{
-			"name": "conan-rel",
-			"description": "Conan toolchain (Release)",
-			"hidden": true,
-			"generator": "Unix Makefiles",
-			"binaryDir": "${sourceDir}/build/Release",
-			"toolchainFile": "${sourceDir}/build/Release/generators/conan_toolchain.cmake"
-		},
-		{
-			"name": "conan-dbg",
-			"description": "Conan toolchain (Debug)",
-			"hidden": true,
-			"generator": "Unix Makefiles",
-			"binaryDir": "${sourceDir}/build/Debug",
-			"toolchainFile": "${sourceDir}/build/Debug/generators/conan_toolchain.cmake"
-		},
-		{
-			"name": "release",
-			"inherits": "conan-rel",
-			"cacheVariables": {
-				"CMAKE_BUILD_TYPE": "Release"
-			}
-		},
-		{
-			"name": "debug",
-			"inherits": "conan-dbg",
-			"cacheVariables": {
-				"CMAKE_BUILD_TYPE": "Debug"
-			}
-		},
-		{
-			"name": "dev",
-			"inherits": "debug",
-			"cacheVariables": {
-				"CMAKE_EXPORT_COMPILE_COMMANDS": true
-			}
-		}
-	],
-	"buildPresets": [
-		{
-			"name": "release",
-			"configurePreset": "release"
-		},
-		{
-			"name": "debug",
-			"configurePreset": "debug"
-		},
-		{
-			"name": "dev",
-			"configurePreset": "dev"
-		}
+	"include": [
+		"cmake/presets/services.json",
+		"cmake/presets/libs.json"
 	]
 }

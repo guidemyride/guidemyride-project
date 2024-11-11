@@ -1,0 +1,45 @@
+{
+	"version": 6,
+	"include": [
+		"../base.json"
+	],
+	"configurePresets": [
+		{
+			"name": "driver-release",
+			"displayName": "Driver service (release config)",
+			"inherits": [ 
+				"driver-base", 
+				"release-base", 
+				"service" 
+			]
+		},
+		{
+			"name": "driver-debug",
+			"displayName": "Driver service (debug config)",
+			"inherits": [ 
+				"driver-base", 
+				"debug-base", 
+				"service" 
+			]
+		},
+		{
+			"name": "driver-base",
+			"hidden": true,
+			"cacheVariables": { 
+				"GMR_BUILD_DRIVER": true
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "driver-release",
+			"displayName": "Driver service (release build)",
+			"configurePreset": "driver-release"
+		},
+		{
+			"name": "driver-debug",
+			"displayName": "Driver service (debug build)",
+			"configurePreset": "driver-debug"
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"version": 6,
+	"include": [
+		"../base.json"
+	],
+	"configurePresets": [
+		{
+			"name": "common-release",
+			"displayName": "Common library (release config)",
+			"inherits": [ 
+				"common-base",
+				"release-base" 
+			]
+		},
+		{
+			"name": "common-debug",
+			"displayName": "Common library (debug config)",
+			"inherits": [ 
+				"common-base",
+				"debug-base" 
+			]
+		},
+		{
+			"name": "common-base",
+			"hidden": true,
+			"cacheVariables": {
+				"GMR_BUILD_COMMON": true
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "common-release",
+			"displayName": "Common library (release build)",
+			"configurePreset": "common-release"
+		},
+		{
+			"name": "common-debug",
+			"displayName": "Common library (debug build)",
+			"configurePreset": "common-debug"
+		}
+	]
+
+}

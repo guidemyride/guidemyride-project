@@ -1,0 +1,40 @@
+{
+	"version": 6,
+	"include": [
+		"services/auth.json",
+		"services/driver.json",
+		"services/passenger.json"
+	],
+	"configurePresets": [
+		{
+			"name": "services-release",
+			"displayName": "All services (release config)",
+			"inherits": [
+				"auth-release", 
+				"driver-release", 
+				"passenger-release"
+			]
+		},
+		{
+			"name": "services-debug",
+			"displayName": "All services (debug config)",
+			"inherits": [
+				"auth-debug",
+				"driver-debug",
+				"passenger-debug"
+			]
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "services-release",
+			"displayName": "All services (release build)",
+			"configurePreset": "services-release"
+		},
+		{
+			"name": "services-debug",
+			"displayName": "All services (debug build)",
+			"configurePreset": "services-debug"
+		}
+	]
+}

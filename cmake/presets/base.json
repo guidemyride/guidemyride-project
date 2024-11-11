@@ -1,0 +1,32 @@
+{
+	"version": 6,
+	"configurePresets": [
+		{
+			"name": "release-base",
+			"description": "Base config preset for release builds",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/build/Release",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		},
+		{
+			"name": "debug-base",
+			"description": "Base config preset for debug builds",
+			"hidden": true,
+			"binaryDir": "${sourceDir}/build/Debug",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Debug"
+			}
+		},
+		{
+			"name": "service",
+			"description": "Base config preset for services",
+			"hidden": true,
+			"cacheVariables": {
+				"GMR_BUILD_COMMON": true,
+				"GMR_BUILD_PROTOS": true
+			}
+		}
+	]
+}

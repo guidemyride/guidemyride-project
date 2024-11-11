@@ -1,0 +1,45 @@
+{
+	"version": 6,
+	"include": [
+		"../base.json"
+	],
+	"configurePresets": [
+		{
+			"name": "passenger-release",
+			"displayName": "Passenger service (release config)",
+			"inherits": [ 
+				"passenger-base", 
+				"release-base", 
+				"service" 
+			]
+		},
+		{
+			"name": "passenger-debug",
+			"displayName": "Passenger service (debug config)",
+			"inherits": [ 
+				"passenger-base", 
+				"debug-base", 
+				"service" 
+			]
+		},
+		{
+			"name": "passenger-base",
+			"hidden": true,
+			"cacheVariables": { 
+				"GMR_BUILD_PASSENGER": true
+			}
+		}
+	],
+	"buildPresets": [
+		{
+			"name": "passenger-release",
+			"displayName": "Passenger service (release build)",
+			"configurePreset": "passenger-release"
+		},
+		{
+			"name": "passenger-debug",
+			"displayName": "Passenger service (debug build)",
+			"configurePreset": "passenger-debug"
+		}
+	]
+}
