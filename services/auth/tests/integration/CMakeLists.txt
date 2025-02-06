@@ -2,15 +2,25 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2024 nyashbox
 
-guidemyride_test_sources(
+find_package(GTest REQUIRED)
+include(GoogleTest)
+
+set(TEST_SOURCES
     stub.test.cc
 )
 
-guidemyride_test_libraries(
-    guidemyride::auth
+add_executable(gmr-auth-integration-tests ${TEST_SOURCES})
+target_link_libraries(gmr-auth-integration-tests
+    PUBLIC
+        GTest::gtest
+        GTest::gtest_main
+
+        guidemyride::auth
 )
 
-guidemyride_test_add(
-    "auth"
-    "Run integration tests (Authentication service)"
+gtest_discover_tests(gmr-auth-integration-tests
+    WORKING_DIRECTORY
+        ${CMAKE_CURRENT_LIST_DIR}
+    TEST_PREFIX
+        integration::
 )

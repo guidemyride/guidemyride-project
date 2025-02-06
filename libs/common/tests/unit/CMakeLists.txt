@@ -2,18 +2,28 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2024 nyashbox
 
-guidemyride_test_sources(
+find_package(GTest REQUIRED)
+include(GoogleTest)
+
+set(TEST_SOURCES
     models/driver.test.cc
     models/session.test.cc
 
     utils/hash.test.cc
 )
 
-guidemyride_test_libraries(
-    guidemyride::guidemyride
+add_executable(gmr-common-unit-tests ${TEST_SOURCES})
+target_link_libraries(gmr-common-unit-tests
+    PUBLIC
+        GTest::gtest
+        GTest::gtest_main
+
+        guidemyride::guidemyride
 )
 
-guidemyride_test_add(
-    "common"
-    "Run unit tests (Common library)"
+gtest_discover_tests(gmr-common-unit-tests
+    WORKING_DIRECTORY
+        ${CMAKE_CURRENT_LIST_DIR}
+    TEST_PREFIX
+        unit::
 )
