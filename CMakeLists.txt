@@ -27,11 +27,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# libraries
-add_subdirectory(libs)
-
-# proto files
-add_subdirectory(proto)
-
-# services
-add_subdirectory(services)
+# subdirectories
+add_subdirectory(libs)      # libraries
+add_subdirectory(proto)     # protobuf files
+add_subdirectory(services)  # services
