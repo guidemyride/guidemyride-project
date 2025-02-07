@@ -30,6 +30,4 @@ install(TARGETS gmr-passengerd
 cpack_add_component(passengerd
     DISPLAY_NAME
         "GuideMyRide - Passenger Service"
-    GROUP
-        Services
 )

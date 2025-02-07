@@ -30,6 +30,4 @@ install(TARGETS gmr-driverd
 cpack_add_component(driverd
     DISPLAY_NAME
         "GuideMyRide - Driver Service"
-    GROUP
-        Services
 )

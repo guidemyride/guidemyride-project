@@ -30,6 +30,4 @@ install(TARGETS gmr-authd
 cpack_add_component(authd
     DISPLAY_NAME 
         "GuideMyRide - Authentication Service"
-    GROUP
-        Services
 )
