@@ -8,11 +8,7 @@ set(GMR_COMMON_SOURCES
     utils/hash.cc
 )
 
-if (GMR_COMMON_BUILD_SHARED OR BUILD_SHARED_LIBS)
-    add_library(guidemyride SHARED ${GMR_COMMON_SOURCES})
-else()
-    add_library(guidemyride STATIC ${GMR_COMMON_SOURCES})
-endif()
+add_library(guidemyride STATIC ${GMR_COMMON_SOURCES})
 
 add_library(guidemyride::guidemyride ALIAS guidemyride)
 add_library(guidemyride::libguidemyride ALIAS guidemyride)
