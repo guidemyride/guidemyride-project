@@ -19,3 +19,17 @@ add_executable(gmr-authd
     $<TARGET_OBJECTS:guidemyride::auth>
 )
 
+install(TARGETS gmr-authd 
+    RUNTIME 
+    DESTINATION 
+        bin 
+    COMPONENT 
+        authd
+)
+
+cpack_add_component(authd
+    DISPLAY_NAME 
+        "GuideMyRide - Authentication Service"
+    GROUP
+        Services
+)

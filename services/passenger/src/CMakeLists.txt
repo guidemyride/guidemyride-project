@@ -18,3 +18,18 @@ target_link_libraries(passenger
 add_executable(gmr-passengerd 
     $<TARGET_OBJECTS:guidemyride::passenger>
 )
+
+install(TARGETS gmr-passengerd 
+    RUNTIME 
+    DESTINATION 
+        bin
+    COMPONENT
+        passengerd
+)
+
+cpack_add_component(passengerd
+    DISPLAY_NAME
+        "GuideMyRide - Passenger Service"
+    GROUP
+        Services
+)

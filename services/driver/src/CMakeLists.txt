@@ -19,3 +19,17 @@ add_executable(gmr-driverd
     $<TARGET_OBJECTS:guidemyride::driver>
 )
 
+install(TARGETS gmr-driverd 
+    RUNTIME 
+    DESTINATION 
+        bin
+    COMPONENT
+        driverd 
+)
+
+cpack_add_component(driverd
+    DISPLAY_NAME
+        "GuideMyRide - Driver Service"
+    GROUP
+        Services
+)
