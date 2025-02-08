@@ -2,6 +2,11 @@
 // SPDX-License-Identifier: MIT
 // Copyright (c) 2024-2025 nyashbox
 
+#ifndef GUIDEMYRIDE_SERVICES_AUTH_CONTROLLERS_H_
+#define GUIDEMYRIDE_SERVICES_AUTH_CONTROLLERS_H_
+
+#pragma once
+
 #include <grpc++/grpc++.h>
 
 #include <genproto/auth.grpc.pb.h>
@@ -21,3 +26,5 @@ class AuthServiceImpl final : public AuthService::Service {
 };
 
 }; // namespace guidemyride::auth
+
+#endif // GUIDEMYRIDE_SERVICES_AUTH_CONTROLLERS_H_
