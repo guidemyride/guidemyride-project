@@ -3,27 +3,23 @@
 # Copyright (c) 2024 nyashbox
 
 set(GMR_AUTH_SOURCES
-    authd.cc
-
     controllers/stub_method.cc
 )
 
-add_library(auth OBJECT ${GMR_AUTH_SOURCES})
-add_library(guidemyride::auth ALIAS auth)
+add_library(auth-obj OBJECT ${GMR_AUTH_SOURCES})
+add_library(guidemyride::auth ALIAS auth-obj)
 
-target_link_libraries(auth
-    PRIVATE
+target_link_libraries(auth-obj
+    PUBLIC
         guidemyride::protos
         guidemyride::guidemyride
 )
 
-add_executable(gmr-authd 
-    $<TARGET_OBJECTS:guidemyride::auth>
-)
-
+add_executable(gmr-authd $<TARGET_OBJECTS:guidemyride::auth> authd.cc)
 target_link_libraries(gmr-authd
-    PRIVATE
-       guidemyride::protos 
+    PUBLIC 
+        guidemyride::protos
+        guidemyride::guidemyride
 )
 
 install(TARGETS gmr-authd 
