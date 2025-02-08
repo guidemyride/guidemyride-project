@@ -4,6 +4,8 @@
 
 set(GMR_AUTH_SOURCES
     authd.cc
+
+    controllers/stub_method.cc
 )
 
 add_library(auth OBJECT ${GMR_AUTH_SOURCES})
@@ -17,6 +19,11 @@ target_link_libraries(auth
 
 add_executable(gmr-authd 
     $<TARGET_OBJECTS:guidemyride::auth>
+)
+
+target_link_libraries(gmr-authd
+    PRIVATE
+       guidemyride::protos 
 )
 
 install(TARGETS gmr-authd 
