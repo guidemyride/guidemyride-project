@@ -15,6 +15,9 @@ target_link_libraries(gmr-auth-integration-tests
         GTest::gtest
         GTest::gtest_main
 
+        guidemyride::protos
+        guidemyride::guidemyride
+
         guidemyride::auth
 )
 

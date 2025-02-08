@@ -14,6 +14,10 @@ target_link_libraries(gmr-auth-unit-tests
     PUBLIC
         GTest::gtest
         GTest::gtest_main
+
+        guidemyride::protos
+        guidemyride::guidemyride
+
         guidemyride::auth
 )
 
