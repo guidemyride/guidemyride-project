@@ -25,5 +25,5 @@ gtest_discover_tests(gmr-passenger-unit-tests
     WORKING_DIRECTORY
         ${CMAKE_CURRENT_LIST_DIR}
     TEST_PREFIX
-        unit::
+        services::passenger::unit::
 )

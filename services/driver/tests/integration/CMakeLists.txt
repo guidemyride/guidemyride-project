@@ -25,5 +25,5 @@ gtest_discover_Tests(gmr-driver-integration-tests
     WORKING_DIRECTORY
         ${CMAKE_CURRENT_LIST_DIR}
     TEST_PREFIX
-        integration::
+        services::driver::integration::
 )

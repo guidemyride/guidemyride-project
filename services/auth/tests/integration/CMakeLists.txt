@@ -25,5 +25,5 @@ gtest_discover_tests(gmr-auth-integration-tests
     WORKING_DIRECTORY
         ${CMAKE_CURRENT_LIST_DIR}
     TEST_PREFIX
-        integration::
+        services::auth::integration::
 )

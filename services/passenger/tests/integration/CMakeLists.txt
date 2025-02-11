@@ -25,5 +25,5 @@ gtest_discover_tests(gmr-passenger-integration-tests
     WORKING_DIRECTORY
         ${CMAKE_CURRENT_LIST_DIR}
     TEST_PREFIX
-        integration::
+        services::passenger::integration::
 )
