@@ -36,7 +36,9 @@ CheckOptions:
   - key: readability-identifier-naming.LocalVariableCase
     value: camelBack
   - key: readability-identifier-naming.GlobalVariableCase
-    value: UPPER_CASE
+    value: CamelCase 
+  - key: readability-identifier-naming.GlobalVariablePrefix
+    value: k
   - key: readability-identifier-naming.ProtectedMemberPrefix
     value: _
   - key: readability-identifier-naming.ProtectedMethodPrefix
