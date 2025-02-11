@@ -14,7 +14,11 @@ target_link_libraries(gmr-driver-integration-tests
     PUBLIC
         GTest::gtest
         GTest::gtest_main
+
         guidemyride::driver
+        guidemyride::protos
+
+        guidemyride::guidemyride
 )
 
 gtest_discover_Tests(gmr-driver-integration-tests

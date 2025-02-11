@@ -3,7 +3,7 @@
 # Copyright (c) 2024 nyashbox
 
 set(GMR_DRIVER_SOURCES
-    driverd.cc
+    controllers/stub_method.cc
 )
 
 add_library(driver OBJECT ${GMR_DRIVER_SOURCES})
@@ -15,8 +15,11 @@ target_link_libraries(driver
         guidemyride::guidemyride
 )
 
-add_executable(gmr-driverd 
-    $<TARGET_OBJECTS:guidemyride::driver>
+add_executable(gmr-driverd $<TARGET_OBJECTS:guidemyride::driver> driverd.cc)
+target_link_libraries(gmr-driverd
+    PUBLIC
+        guidemyride::protos
+        guidemyride::guidemyride
 )
 
 install(TARGETS gmr-driverd 
