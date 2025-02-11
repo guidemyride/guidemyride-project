@@ -3,7 +3,7 @@
 # Copyright (c) 2024 nyashbox
 
 set(GMR_PASSENGER_SOURCES
-    passengerd.cc
+    controllers/stub_method.cc
 )
 
 add_library(passenger OBJECT ${GMR_PASSENGER_SOURCES})
@@ -17,6 +17,14 @@ target_link_libraries(passenger
 
 add_executable(gmr-passengerd 
     $<TARGET_OBJECTS:guidemyride::passenger>
+    passengerd.cc
+)
+target_link_libraries(gmr-passengerd
+    PRIVATE
+        guidemyride::protos
+        guidemyride::guidemyride
+
+        guidemyride::passenger
 )
 
 install(TARGETS gmr-passengerd 
